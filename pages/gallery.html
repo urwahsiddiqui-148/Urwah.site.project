@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio | Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/theme.js"></script>
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h3 {
+            color: var(--primary-color);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay h3 {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tsparticles"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Dev<span>Portfolio</span></a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section container">
+        <div class="fade-up">
+            <h2 style="text-align: center;">Gallery</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto;">A visual collection of my design
+                explorations, UI concepts, and creative coding experiments.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item zoom-in">
+                <img src="https://via.placeholder.com/400x300/101010/00ff9d?text=UI+Design" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <h3>UI Design</h3>
+                </div>
+            </div>
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item zoom-in" style="transition-delay: 0.1s;">
+                <img src="https://via.placeholder.com/400x300/101010/00b8ff?text=Mobile+App" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <h3>Mobile App</h3>
+                </div>
+            </div>
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item zoom-in" style="transition-delay: 0.2s;">
+                <img src="https://via.placeholder.com/400x300/101010/ff0055?text=Dashboard" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <h3>Dashboard</h3>
+                </div>
+            </div>
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item zoom-in" style="transition-delay: 0.3s;">
+                <img src="https://via.placeholder.com/400x300/101010/ffff00?text=Wireframe" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <h3>Wireframe</h3>
+                </div>
+            </div>
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item zoom-in" style="transition-delay: 0.4s;">
+                <img src="https://via.placeholder.com/400x300/101010/ff9900?text=Prototype" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <h3>Prototype</h3>
+                </div>
+            </div>
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item zoom-in" style="transition-delay: 0.5s;">
+                <img src="https://via.placeholder.com/400x300/101010/9900ff?text=Concept" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <h3>Concept</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+    <script src="../assets/js/particles-config.js"></script>
+</body>
+
+</html>

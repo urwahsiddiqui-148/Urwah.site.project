@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio | Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/theme.js"></script>
+    <style>
+        .resume-section {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 2rem;
+        }
+
+        .resume-block {
+            margin-bottom: 3rem;
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid rgba(0, 255, 157, 0.2);
+        }
+
+        .resume-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -6px;
+            width: 10px;
+            height: 10px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: var(--glow-primary);
+        }
+
+        .resume-item {
+            margin-bottom: 2rem;
+        }
+
+        .resume-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .resume-date {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            background: rgba(0, 255, 157, 0.1);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        .resume-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .resume-item h4 {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .resume-item ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .resume-item li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tsparticles"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Dev<span>Portfolio</span></a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section container">
+        <div class="resume-section fade-up">
+            <div class="resume-header">
+                <div>
+                    <h2>My Resume</h2>
+                    <p style="margin-bottom: 0;">Professional Experience & Education</p>
+                </div>
+                <a href="#" class="btn" download>Download PDF</a>
+            </div>
+
+            <h3 style="margin-bottom: 2rem; color: var(--secondary-color);">Experience</h3>
+
+            <div class="resume-block">
+                <div class="resume-item">
+                    <span class="resume-date">2022 - Present</span>
+                    <h3>Senior Frontend Developer</h3>
+                    <h4>Tech Solutions Inc.</h4>
+                    <ul>
+                        <li>Led a team of 5 developers in rebuilding the company's core product using React and
+                            TypeScript.</li>
+                        <li>Improved site performance by 40% through code splitting and image optimization.</li>
+                        <li>Implemented a new design system that increased development speed by 25%.</li>
+                    </ul>
+                </div>
+
+                <div class="resume-item">
+                    <span class="resume-date">2020 - 2022</span>
+                    <h3>Web Developer</h3>
+                    <h4>Creative Agency</h4>
+                    <ul>
+                        <li>Developed responsive websites for over 20 clients using HTML, CSS, and JavaScript.</li>
+                        <li>Collaborated with designers to ensure pixel-perfect implementation of UI/UX designs.</li>
+                        <li>Maintained and updated existing client websites, ensuring security and compatibility.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 2rem; color: var(--secondary-color);">Education</h3>
+
+            <div class="resume-block">
+                <div class="resume-item">
+                    <span class="resume-date">2016 - 2020</span>
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <h4>University of Technology</h4>
+                    <p>Graduated with Honors. Specialized in Web Technologies and Human-Computer Interaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+    <script src="../assets/js/particles-config.js"></script>
+</body>
+
+</html>

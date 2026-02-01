@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/theme.js"></script>
+    <style>
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: 15px;
+            box-shadow: var(--glow-secondary);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            margin-bottom: 2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tsparticles"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Dev<span>Portfolio</span></a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section container">
+        <div class="about-section fade-up">
+            <div class="about-image slide-in-left">
+                <img src="../assets/images/profile-secondary.png" alt="About Me">
+            </div>
+            <div class="about-content slide-in-right">
+                <h2>About Me</h2>
+                <p>I am a passionate developer with a keen eye for design and a drive for creating seamless digital
+                    experiences. With a background in computer science and years of hands-on experience, I specialize in
+                    building responsive, accessible, and performant web applications.</p>
+                <p>My journey started with a curiosity for how things work on the web, and it has evolved into a career
+                    where I solve complex problems with clean code.</p>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h4>Name</h4>
+                        <p>Urwah Shafiq Siddui</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Email</h4>
+                        <p>urwahshafiq23@.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Location</h4>
+                        <p>Lahore, Pakistan</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Availability</h4>
+                        <p>Open for Work</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="resume.html" class="btn">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+    <script src="../assets/js/particles-config.js"></script>
+</body>
+
+</html>
