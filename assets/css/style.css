@@ -367,8 +367,6 @@ footer {
     /* Navbar height */
     position: relative;
     overflow: hidden;
-    width: 100%;
-    max-width: 100%;
 }
 
 .hero-content {
@@ -1492,16 +1490,15 @@ footer {
         left: 0;
         width: 100%;
         height: auto;
-        background: rgba(10, 10, 10, 0.95);
+        background: var(--card-bg);
         flex-direction: column;
-        align-items: center;
-        padding: 1rem 0;
+        align-items: stretch;
+        padding: 0;
         clip-path: circle(0% at 100% 0);
         -webkit-clip-path: circle(0% at 100% 0);
         transition: all 0.5s ease-in-out;
         z-index: 999;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(15px);
         opacity: 0;
         visibility: hidden;
     }
@@ -1514,10 +1511,165 @@ footer {
     }
 
     .nav-links a {
+        display: flex;
+        align-items: center;
         font-size: 1.1rem;
-        margin: 0.8rem 0;
+        margin: 0;
+        padding: 0.8rem 2rem;
         width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        gap: 1rem;
+
+        /* Initial state for slide-in animation */
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s ease;
+    }
+
+    .nav-links.active a {
+        /* Final state when menu opens */
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Staggered entrance delays */
+    .nav-links.active a:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .nav-links.active a:nth-child(2) {
+        transition-delay: 0.15s;
+    }
+
+    .nav-links.active a:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+
+    .nav-links.active a:nth-child(4) {
+        transition-delay: 0.25s;
+    }
+
+    .nav-links.active a:nth-child(5) {
+        transition-delay: 0.3s;
+    }
+
+    .nav-links.active a:nth-child(6) {
+        transition-delay: 0.35s;
+    }
+
+    .nav-links.active a:nth-child(7) {
+        transition-delay: 0.4s;
+    }
+
+    .nav-links.active a:nth-child(8) {
+        transition-delay: 0.45s;
+    }
+
+    .nav-links.active a:nth-child(9) {
+        transition-delay: 0.5s;
+    }
+
+    .nav-links.active .theme-toggle {
+        transition-delay: 0.55s;
+    }
+
+    [data-theme="light"] .nav-links a {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    /* Override Desktop Underline Animation */
+    .nav-links a::after {
+        content: '\f054';
+        /* Chevron right */
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: auto;
+        height: auto;
+        background: none;
+        box-shadow: none;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        transition: transform 0.3s ease;
+        margin-left: auto;
+        /* Push chevron to the right */
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+        width: auto;
+        color: var(--primary-color);
+        transform: translateX(5px);
+    }
+
+    .nav-links a::before {
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        color: var(--text-color);
+        font-size: 1.2rem;
+        width: 25px;
         text-align: center;
+    }
+
+    .nav-links a.active::before,
+    .nav-links a:hover::before {
+        color: var(--primary-color);
+        text-shadow: var(--glow-primary);
+    }
+
+    /* Assign Icons to Links */
+    .nav-links a[href="#home"]::before {
+        content: '\f015';
+    }
+
+    .nav-links a[href="#about"]::before {
+        content: '\f2bb';
+    }
+
+    .nav-links a[href="#skills"]::before {
+        content: '\f0eb';
+    }
+
+    .nav-links a[href="#projects"]::before {
+        content: '\f07b';
+    }
+
+    .nav-links a[href="#services"]::before {
+        content: '\f085';
+    }
+
+    .nav-links a[href="#resume"]::before {
+        content: '\f15c';
+    }
+
+    .nav-links a[href="#community"]::before {
+        content: '\f0c0';
+    }
+
+    .nav-links a[href="#gallery"]::before {
+        content: '\f03e';
+    }
+
+    .nav-links a[href="#contact"]::before {
+        content: '\f0e0';
+    }
+
+    .theme-toggle {
+        margin: 1.5rem auto;
+        width: fit-content;
+        /* Initial state for slide-in animation */
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s ease;
+    }
+
+    .nav-links.active .theme-toggle {
+        /* Final state when menu opens */
+        opacity: 1;
+        transform: translateX(0);
     }
 
     .hero {
